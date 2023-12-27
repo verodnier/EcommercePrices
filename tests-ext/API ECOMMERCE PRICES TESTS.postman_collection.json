@@ -1,0 +1,710 @@
+{
+	"info": {
+		"_postman_id": "1087f024-62f8-48ec-878c-e0e3a1fe3e6f",
+		"name": "API ECOMMERCE PRICES TESTS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29857817"
+	},
+	"item": [
+		{
+			"name": "findPriceByBrandIdProductIdAndApplicationDateTest",
+			"item": [
+				{
+					"name": "CASO_PRUEBA_1",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"CASO_PRUEBA_1\", () => {\r",
+									"    pm.response.to.have.status(200);\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.brandId).to.equal(1);\r",
+									"    pm.expect(jsonData.productId).to.equal(35455);\r",
+									"    pm.expect(jsonData.priceList).to.equal(1);\r",
+									"    pm.expect(jsonData.startDate).to.equal(\"2020-06-14T05:00:00.000+00:00\");\r",
+									"    pm.expect(jsonData.endDate).to.equal(\"2021-01-01T04:59:59.000+00:00\");\r",
+									"    pm.expect(jsonData.price).to.equal(35.5);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/?brandId={{brandId}}&productId={{productId}}&applicationDate=2020-06-14 10:00:00",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								""
+							],
+							"query": [
+								{
+									"key": "brandId",
+									"value": "{{brandId}}"
+								},
+								{
+									"key": "productId",
+									"value": "{{productId}}"
+								},
+								{
+									"key": "applicationDate",
+									"value": "2020-06-14 10:00:00"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CASO_PRUEBA_2",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"CASO_PRUEBA_1\", () => {\r",
+									"    pm.response.to.have.status(200);\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.brandId).to.equal(1);\r",
+									"    pm.expect(jsonData.productId).to.equal(35455);\r",
+									"    pm.expect(jsonData.priceList).to.equal(2);\r",
+									"    pm.expect(jsonData.startDate).to.equal(\"2020-06-14T20:00:00.000+00:00\");\r",
+									"    pm.expect(jsonData.endDate).to.equal(\"2020-06-14T23:30:00.000+00:00\");\r",
+									"    pm.expect(jsonData.price).to.equal(25.45);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/?brandId={{brandId}}&productId={{productId}}&applicationDate=2020-06-14 16:00:00",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								""
+							],
+							"query": [
+								{
+									"key": "brandId",
+									"value": "{{brandId}}"
+								},
+								{
+									"key": "productId",
+									"value": "{{productId}}"
+								},
+								{
+									"key": "applicationDate",
+									"value": "2020-06-14 16:00:00"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CASO_PRUEBA_3",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"CASO_PRUEBA_1\", () => {\r",
+									"    pm.response.to.have.status(200);\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.brandId).to.equal(1);\r",
+									"    pm.expect(jsonData.productId).to.equal(35455);\r",
+									"    pm.expect(jsonData.priceList).to.equal(1);\r",
+									"    pm.expect(jsonData.startDate).to.equal(\"2020-06-14T05:00:00.000+00:00\");\r",
+									"    pm.expect(jsonData.endDate).to.equal(\"2021-01-01T04:59:59.000+00:00\");\r",
+									"    pm.expect(jsonData.price).to.equal(35.5);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/?brandId={{brandId}}&productId={{productId}}&applicationDate=2020-06-14 21:00:00",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								""
+							],
+							"query": [
+								{
+									"key": "brandId",
+									"value": "{{brandId}}"
+								},
+								{
+									"key": "productId",
+									"value": "{{productId}}"
+								},
+								{
+									"key": "applicationDate",
+									"value": "2020-06-14 21:00:00"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CASO_PRUEBA_4",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"CASO_PRUEBA_1\", () => {\r",
+									"    pm.response.to.have.status(200);\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.brandId).to.equal(1);\r",
+									"    pm.expect(jsonData.productId).to.equal(35455);\r",
+									"    pm.expect(jsonData.priceList).to.equal(3);\r",
+									"    pm.expect(jsonData.startDate).to.equal(\"2020-06-15T05:00:00.000+00:00\");\r",
+									"    pm.expect(jsonData.endDate).to.equal(\"2020-06-15T16:00:00.000+00:00\");\r",
+									"    pm.expect(jsonData.price).to.equal(30.5);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/?brandId={{brandId}}&productId={{productId}}&applicationDate=2020-06-15 10:00:00",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								""
+							],
+							"query": [
+								{
+									"key": "brandId",
+									"value": "{{brandId}}"
+								},
+								{
+									"key": "productId",
+									"value": "{{productId}}"
+								},
+								{
+									"key": "applicationDate",
+									"value": "2020-06-15 10:00:00"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CASO_PRUEBA_5",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"CASO_PRUEBA_1\", () => {\r",
+									"    pm.response.to.have.status(200);\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.brandId).to.equal(1);\r",
+									"    pm.expect(jsonData.productId).to.equal(35455);\r",
+									"    pm.expect(jsonData.priceList).to.equal(4);\r",
+									"    pm.expect(jsonData.startDate).to.equal(\"2020-06-15T21:00:00.000+00:00\");\r",
+									"    pm.expect(jsonData.endDate).to.equal(\"2021-01-01T04:59:59.000+00:00\");\r",
+									"    pm.expect(jsonData.price).to.equal(38.95);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/?brandId={{brandId}}&productId={{productId}}&applicationDate=2020-06-16 21:00:00",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								""
+							],
+							"query": [
+								{
+									"key": "brandId",
+									"value": "{{brandId}}"
+								},
+								{
+									"key": "productId",
+									"value": "{{productId}}"
+								},
+								{
+									"key": "applicationDate",
+									"value": "2020-06-16 21:00:00"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CASO_PRUEBA_6",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"CASO_PRUEBA_1\", () => {\r",
+									"    pm.response.to.have.status(200);\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.brandId).to.equal(1);\r",
+									"    pm.expect(jsonData.productId).to.equal(35455);\r",
+									"    pm.expect(jsonData.priceList).to.equal(1);\r",
+									"    pm.expect(jsonData.startDate).to.equal(\"2020-06-14T05:00:00.000+00:00\");\r",
+									"    pm.expect(jsonData.endDate).to.equal(\"2021-01-01T04:59:59.000+00:00\");\r",
+									"    pm.expect(jsonData.price).to.equal(35.5);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/?brandId={{brandId}}&productId={{productId}}&applicationDate=2020-06-14 00:00:00",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								""
+							],
+							"query": [
+								{
+									"key": "brandId",
+									"value": "{{brandId}}"
+								},
+								{
+									"key": "productId",
+									"value": "{{productId}}"
+								},
+								{
+									"key": "applicationDate",
+									"value": "2020-06-14 00:00:00"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CASO_PRUEBA_7",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"CASO_PRUEBA_1\", () => {\r",
+									"    pm.response.to.have.status(404);\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.httpStatus).to.equal(\"NOT_FOUND\");\r",
+									"    pm.expect(jsonData.errorCode).to.equal(\"error.price.not.found\");\r",
+									"    pm.expect(jsonData.message).to.equal(\"Precio no encontrado\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/?brandId={{brandId}}&productId={{productId}}&applicationDate=2020-06-13 01:00:00",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								""
+							],
+							"query": [
+								{
+									"key": "brandId",
+									"value": "{{brandId}}"
+								},
+								{
+									"key": "productId",
+									"value": "{{productId}}"
+								},
+								{
+									"key": "applicationDate",
+									"value": "2020-06-13 01:00:00"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CASO_PRUEBA_8",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"CASO_PRUEBA_1\", () => {\r",
+									"    pm.response.to.have.status(200);\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.brandId).to.equal(1);\r",
+									"    pm.expect(jsonData.productId).to.equal(35455);\r",
+									"    pm.expect(jsonData.priceList).to.equal(4);\r",
+									"    pm.expect(jsonData.startDate).to.equal(\"2020-06-15T21:00:00.000+00:00\");\r",
+									"    pm.expect(jsonData.endDate).to.equal(\"2021-01-01T04:59:59.000+00:00\");\r",
+									"    pm.expect(jsonData.price).to.equal(38.95);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/?brandId={{brandId}}&productId={{productId}}&applicationDate=2020-12-31 23:59:59",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								""
+							],
+							"query": [
+								{
+									"key": "brandId",
+									"value": "{{brandId}}"
+								},
+								{
+									"key": "productId",
+									"value": "{{productId}}"
+								},
+								{
+									"key": "applicationDate",
+									"value": "2020-12-31 23:59:59"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CASO_PRUEBA_9",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"CASO_PRUEBA_1\", () => {\r",
+									"    pm.response.to.have.status(404);\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.httpStatus).to.equal(\"NOT_FOUND\");\r",
+									"    pm.expect(jsonData.errorCode).to.equal(\"error.price.not.found\");\r",
+									"    pm.expect(jsonData.message).to.equal(\"Precio no encontrado\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/?brandId={{brandId}}&productId={{productId}}&applicationDate=2021-01-01 00:00:00",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								""
+							],
+							"query": [
+								{
+									"key": "brandId",
+									"value": "{{brandId}}"
+								},
+								{
+									"key": "productId",
+									"value": "{{productId}}"
+								},
+								{
+									"key": "applicationDate",
+									"value": "2021-01-01 00:00:00"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CASO_PRUEBA_10",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"CASO_PRUEBA_1\", () => {\r",
+									"    pm.response.to.have.status(404);\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.httpStatus).to.equal(\"NOT_FOUND\");\r",
+									"    pm.expect(jsonData.errorCode).to.equal(\"error.price.not.found\");\r",
+									"    pm.expect(jsonData.message).to.equal(\"Precio no encontrado\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/?brandId=2&productId={{productId}}&applicationDate=2020-06-14 00:00:00",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								""
+							],
+							"query": [
+								{
+									"key": "brandId",
+									"value": "2"
+								},
+								{
+									"key": "productId",
+									"value": "{{productId}}"
+								},
+								{
+									"key": "applicationDate",
+									"value": "2020-06-14 00:00:00"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CASO_PRUEBA_11",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"CASO_PRUEBA_1\", () => {\r",
+									"    pm.response.to.have.status(404);\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.httpStatus).to.equal(\"NOT_FOUND\");\r",
+									"    pm.expect(jsonData.errorCode).to.equal(\"error.price.not.found\");\r",
+									"    pm.expect(jsonData.message).to.equal(\"Precio no encontrado\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/?brandId={{brandId}}&productId=45546&applicationDate=2020-06-14 00:00:00",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								""
+							],
+							"query": [
+								{
+									"key": "brandId",
+									"value": "{{brandId}}"
+								},
+								{
+									"key": "productId",
+									"value": "45546"
+								},
+								{
+									"key": "applicationDate",
+									"value": "2020-06-14 00:00:00"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "http://localhost:8080/api/ecommerce/prices",
+			"type": "string"
+		},
+		{
+			"key": "brandId",
+			"value": "1",
+			"type": "string"
+		},
+		{
+			"key": "productId",
+			"value": "35455",
+			"type": "string"
+		},
+		{
+			"key": "applicationDate",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
